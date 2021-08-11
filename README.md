@@ -23,6 +23,6 @@ sudo apt-get install -y nvidia-docker2
 Docker는 Dokerfile을 이용하여 설치명령어를 작성합니다. Dokerfile을 build 과정을 수행하여 docker image로 변환되며 변환된 이후 docker를 사용할 수 있습니다.
 
 ```bash
-    git clone https://https://github.com/tjdalsckd/ros2_docker_ubuntu20.04
+    git clone https://github.com/tjdalsckd/ros2_docker_ubuntu20.04.git
     bash build.sh
 ```
