@@ -15,7 +15,7 @@ RUN sudo apt update && sudo apt install -y curl gnupg2 lsb-release
 RUN sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
 RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
-RUN bash -c "mkdir -p ~/ros2_foxy; cd ~/ros2_foxy;wget https://github.com/ros2/ros2/releases/download/release-foxy-20201211/ros2-foxy-20201211-linux-focal-amd64.tar.bz2; tar xf *.tar.bz2"
+RUN bash -c "mkdir -p ~/ros2_foxy; cd ~/ros2_foxy;wget https://github.com/ros2/ros2/releases/download/release-foxy-20211013/ros2-foxy-20211013-macos-amd64.tar.bz2; tar xf *.tar.bz2"
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Minsk
 ENV DEBIAN_FRONTEND=noninteractive 
