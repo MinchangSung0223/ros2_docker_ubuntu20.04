@@ -25,9 +25,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 RUN sudo apt update
 RUN sudo apt-get install -y libpyside2-dev
 RUN sudo apt install -y python3-rosdep
-RUN bash -c "cd ~/ros2_foxy; sudo rosdep init; sudo rosdep update; sudo rosdep install --from-paths ~/ros2_foxy/ros2-linux/share --ignore-src --rosdistro foxy -y --skip-keys 'console_bridge fastcdr fastrtps osrf_testing_tools_cpp poco_vendor rmw_connextdds rti-connext-dds-5.3.1 tinyxml_vendor tinyxml2_vendor urdfdom urdfdom_headers'"
+RUN /bin/bash -c "cd ~/ros2_foxy; sudo rosdep init; sudo rosdep update; sudo rosdep install --from-paths ~/ros2_foxy/ros2-linux/share --ignore-src --rosdistro foxy -y --skip-keys 'console_bridge fastcdr fastrtps osrf_testing_tools_cpp poco_vendor rmw_connextdds rti-connext-dds-5.3.1 tinyxml_vendor tinyxml2_vendor urdfdom urdfdom_headers'"
 RUN sudo apt install -y libpython3-dev python3-pip
 RUN pip3 install -U argcomplete
-RUN bash -c "echo -e '. ~/ros2_foxy/ros2-linux/setup.bash' >> ~/.bashrc"
+RUN /bin/bash -c "echo -e '. ~/ros2_foxy/ros2-linux/setup.bash' >> ~/.bashrc"
 EXPOSE 80
 EXPOSE 443
